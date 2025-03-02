@@ -1,0 +1,170 @@
+@import 'boxicons/css/boxicons.min.css';
+
+/* gree: #1BB13C 
+    blue : #1B5C9E */
+
+    html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  .navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    height: 45px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15); 
+    z-index: 1000;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; 
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+
+  .navbar-brand, .brand-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+  }
+  .logo {
+    height: 115px;
+    margin-right: 0px;
+    margin-left: 10px;
+    margin-top: 3px;
+  }
+  
+  
+  .brand-name {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .brand-name:hover{
+    background-color: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    text-shadow: 0px 0px 0px transparent;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+
+
+  .nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #1B5C9E;
+    padding: 5px 7px;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0; 
+    height: 2px;
+    background-color: #1B5C9E;
+    transition: width 0.3s ease-in-out; 
+  }
+
+
+  .nav-link:hover {
+    color: #041e39; 
+  }
+
+  .nav-link:hover::after {
+    width: 100%; 
+  }
+
+  
+  .log{
+    margin-right:-130px;
+  }
+  
+  .log #login:hover{
+    color:white;
+    border: none;
+    background-color:transparent;
+    box-shadow: 0px 0px 0px transparent;
+  }
+
+  
+  .log #login{
+    background-color:transparent;
+    border:none;
+    padding: 0px;
+
+  }
+  .log #login i{
+    font-size: 40px;
+    color: #1B5C9E;
+    cursor: pointer;
+  }
+
+  .footer {
+      background-color: #0A0D24;
+      color: white;
+      padding: 1.5rem;
+      height: 400px;
+    }
+  
+    .footer-content {
+      display: flex;
+      justify-content:space-around;
+    }
+  
+    .page-content {
+      padding: 2rem;
+      text-align: center;
+      color: white;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 1rem;
+      color: rgb(229, 221, 207);
+    }
+  
+    p a{
+      font-size: 18px;
+      margin-bottom: 1rem;
+      color: rgb(229, 221, 207);
+      text-decoration: none;
+      transition: text-shadow 0.2s ease;
+    }
+    p a:hover{
+      font-size: 18px;
+      margin-bottom: 1rem;
+      color: rgba(5, 215, 187, 0.909);
+      text-shadow: 2px 2px 5px  rgba(28, 244, 215, 0.909);
+    }
+    span:hover{
+      color: rgba(5, 215, 187, 0.909);
+      text-shadow: 2px 2px 5px  rgba(28, 244, 215, 0.909);
+    }
+  
+    h2{
+      margin-bottom: 2rem;
+      margin-top:4rem;
+    }
