@@ -1,0 +1,21 @@
+.our-services1 {
+    text-align: center;
+    padding: 50px 20px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+#spn{
+    color: #1BB13C;
+}
+#spn:hover{
+    text-shadow: none;
+}
+.our-services1 h1 {
+    font-size: 2rem;
+    color: #1B5C9E; 
+    margin-bottom: 20px;
+}
+
+
