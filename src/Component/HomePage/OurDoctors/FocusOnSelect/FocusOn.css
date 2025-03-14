@@ -1,0 +1,18 @@
+.slick-slide {
+    padding: 25px 10px; 
+  }
+  .slider-containerD {
+    height: auto; 
+    max-height: 560px; 
+    overflow: hidden; 
+    cursor: grab;
+    position: relative;
+    z-index: 2; 
+
+}
+.slick-slide {
+  padding: 25px 10px; 
+}
+
+
+

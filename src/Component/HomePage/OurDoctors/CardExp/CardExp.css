@@ -1,0 +1,15 @@
+.card-Exp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.exp-item {
+    background-color:  #1B5C9E;
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: -1px 4px 10px rgba(27, 177, 60, 0.4);
+}
