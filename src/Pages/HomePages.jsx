@@ -5,7 +5,7 @@ import Footer from "../Component/Footer/Footer";
 import FocusOnSelect from '../Component/HomePage/OurServices/FocusOnSelect/FocusOnSelect'
 import WhyChooseUs from "../Component/HomePage/WhyChooseUs/WhyChooseUs";
 import OurDoctors from "../Component/HomePage/OurDoctors/OurDoctors";
-
+import ClientFeedBack from "../Component/HomePage/ClientFeedBack/ClientFeedBack";
 export default function HomePages() {
     return (
         <div className="home-pages">
@@ -14,6 +14,7 @@ export default function HomePages() {
             <OurServices/>
             <WhyChooseUs/>
             <OurDoctors/>
+            <ClientFeedBack/>
             <Footer/>
         </div>
     );

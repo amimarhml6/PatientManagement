@@ -1,0 +1,172 @@
+/* Conteneur principal */
+.feedback-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1px 2.5rem;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #1b5d9e62;
+    text-align: center;
+    position: relative;
+    margin-bottom: 55px;
+}
+
+.feedback-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1B5C9E;
+    margin-bottom: 1.5rem;
+}
+
+/* Description sous le titre */
+.feedback-description {
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Grille des avis */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .feedback-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Carte d'avis */
+.feedback-card {
+    width: 250px;
+    max-width: 100%;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Header de la carte */
+.feedback-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* Avatar */
+.feedback-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #1B5C9E;
+}
+
+/* Nom du client */
+.feedback-name {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0A0D24;
+}
+
+/* Étoiles */
+.feedback-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star-filled {
+    color: #1BB13C;
+}
+
+.star-empty {
+    color: #ccc;
+    cursor: pointer;
+}
+
+/* Commentaire */
+.feedback-comment {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Formulaire d'avis */
+.feedback-form-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px #1bb13c41;
+    margin-bottom: 30px;
+}
+
+/* Titre formulaire */
+.form-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #0A0D24;
+}
+
+ 
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #1B5C9E;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.input-field:focus,
+.textarea-field:focus {
+    outline: none;  
+    border-color: #1B5C9E;  
+    box-shadow: 0px 0px 5px rgba(27, 92, 158, 0.5);  
+}
+
+.textarea-field {
+    height: 80px;
+    resize: none;
+}
+
+/* Sélection des étoiles */
+.rating-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 1rem;
+}
+
+.rating-container .star {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rating-container .star:hover {
+    color: #1BB13C;
+}
+
+/* Bouton */
+button {
+    padding: 0.5rem 1rem;
+    background: #1BB13C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #1B5C9E;
+}
