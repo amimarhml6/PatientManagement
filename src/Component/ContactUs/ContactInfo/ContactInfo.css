@@ -1,0 +1,81 @@
+ 
+.contact-info {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 1000px;
+    margin: 55px auto;
+    overflow: hidden;
+  }
+  
+ 
+  .contact-details {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .contact-item box-icon {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+  
+ 
+  .contact-item p {
+    font-size: 20px;
+    color: #333333;
+    margin: 0;
+  }
+  
+ 
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-icons p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .social-icons box-icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons box-icon:hover {
+    transform: scale(1.1);
+    color: #1B5C9E ;
+  }
+  
+ 
+  .map-container {
+    width: 400px;
+    height: 300px;
+    position: relative;
+  }
+  
+ 
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 12px 12px 0;
+  }
+  

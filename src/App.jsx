@@ -3,7 +3,8 @@ import Home from './Pages/HomePages';
 import Services from './Pages/Services';
 import Apropos from './Pages/Apropos';
 import Contact from './Pages/Contact';
-import LoginAdmin from './Pages/LoginAdmin';
+import Login from './Pages/LoginAdmin';
+import BloodDonation from './Pages/BloodDonation';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/propos" element={<Apropos />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<LoginAdmin />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/BloodDonation" element={<BloodDonation />} />
       </Routes>
     </Router>
   );

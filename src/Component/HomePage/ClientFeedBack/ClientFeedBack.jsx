@@ -48,7 +48,7 @@ const ClientFeedBack = () => {
   return (
     <div className="feedback-container">
       
-      <h2 className="feedback-title">Patients <spnan style={{color:"#1BB13C"}}>Feedback</spnan></h2>
+      <h2 className="feedback-title">Patients <span style={{color:"#1BB13C"}}>Feedback</span></h2>
       <p className="feedback-description">
         These reviews are shared by our patients who have been treated
         at our clinic. Their experience reflects the quality of our care.
@@ -76,7 +76,7 @@ const ClientFeedBack = () => {
       </div>
 
       <div className="feedback-form-container">
-        <h3 className="form-title" style={{color:"#1B5C9E"}}>Leave <spnan style={{color:"#1BB13C"}}>feedback</spnan> </h3>
+        <h3 className="form-title" style={{color:"#1B5C9E"}}>Leave <span style={{color:"#1BB13C"}}>feedback</span> </h3>
         <form onSubmit={handleSubmit} className="feedback-form">
           <input
             type="text"

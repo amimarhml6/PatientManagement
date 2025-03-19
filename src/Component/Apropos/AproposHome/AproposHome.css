@@ -1,0 +1,67 @@
+ 
+.swiper {
+  width:100%;
+  height: 430px;
+  cursor: grab;  
+}
+
+ 
+.swiper-slide {
+  opacity: 0 !important;  
+  transition: opacity 1s ease-in-out; 
+}
+ 
+.swiper-slide-active {
+  opacity: 1 !important;
+}
+
+ 
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: 100%; 
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  
+}
+
+#slide1 {
+  background-image:  linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../../../assets/AproposPicture1.jpg');
+}
+#slide2 {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../../../assets/AproposPicture2.jpg');
+}
+#slide3 {
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../../../assets/AproposPicture3.jpg');
+}
+
+ 
+.slide-content h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+ 
+.slide-content p {
+  font-size: 1.5rem;
+  margin-bottom:80px;
+  max-width: 800px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+ 
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff;
+  opacity: 1;
+}

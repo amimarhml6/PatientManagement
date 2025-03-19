@@ -18,6 +18,7 @@ export default function Navbar() {
       <div className="navbar-links">
         <Link to="/Home" className="nav-link">Home</Link>
         <Link to="/services" className="nav-link">Services</Link>
+        <Link to="/BloodDonation" className="nav-link">BloodDonation</Link>
         <Link to="/propos" className="nav-link">A propos</Link>
         <Link to="/contact" className="nav-link">Contact Us</Link>
       </div>
