@@ -1,0 +1,30 @@
+.Blood-Donation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom:100px;
+    padding: 20px;
+}
+.Blood-Info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top:15px;
+}
+.Blood-right {
+    height: 550px;
+    width: 550px;
+    background: url('../../../assets/pictureBloodDonation.svg') no-repeat center center;
+    background-size: 490px  10000px;
+
+}
+
+.Blood-left{
+    height: 550px;
+    width: 550px;
+    padding: 30px 0px 0px 0px;
+    margin-top:-20px
+}

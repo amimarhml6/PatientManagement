@@ -16,10 +16,11 @@
   }
   
   .apropos-des-container h3 {
-    font-size: 1.5em;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    color: #555;
+    font-size: 1.4em;
+     
+    margin-bottom: 5px;
+    text-align: center;
+    color: #000000;
   }
   
 

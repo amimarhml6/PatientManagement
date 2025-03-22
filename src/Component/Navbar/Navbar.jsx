@@ -24,7 +24,7 @@ export default function Navbar() {
       </div>
 
       <div className='log' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '25px', marginRight: "100px" }}>
-        <button className="nav-link" id='login' onClick={() => navigate('/admin')}><i className='bx bxs-user-circle'></i></button>
+        <button className="nav-link" id='login' onClick={() => navigate('/login')}><i className='bx bxs-user-circle'></i></button>
       </div>
     </nav>
   );

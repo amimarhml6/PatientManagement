@@ -39,7 +39,7 @@ function SwipeToSlide() {
           <CardDoctor image={DocHematologue} name="hematology doctors" Exp1="15 years exp" Exp3="Blood diseases" Exp4="Assessment analysis"/>
         </div>
         <div> 
-          {/* photo nbdlha */}
+           
           <CardDoctor image={DocRadiologue} name="radiologist doctors"  Exp1="10 years exp" Exp2="Medical Imaging" Exp3="Fracture Diagnosis"  Exp4="MRI & CT Scan"/>
         </div>
         

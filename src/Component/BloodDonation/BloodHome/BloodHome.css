@@ -1,0 +1,55 @@
+ 
+.swiper {
+    width:100%;
+    height: 460px;
+    cursor: grab;  
+  }
+  
+   
+  .swiper-slide {
+    opacity: 0 !important;  
+    transition: opacity 1s ease-in-out; 
+  }
+   
+  .swiper-slide-active {
+    opacity: 1 !important;
+  }
+  
+   
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    height: 100%; 
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    
+  }
+  
+  #slide11 {
+    background-image:   url('../../../assets/BloodDonation1.svg');
+  }
+  #slide22 {
+    background-image:  url('../../../assets/BloodDonation2.svg');
+  }
+  #slide33 {
+    background-image: url('../../../assets/BloodDonation3.svg');
+  }
+  
+   
+ 
+  
+   
+  .swiper-pagination-bullet {
+    background-color: white;
+    opacity: 0.5;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #007bff;
+    opacity: 1;
+  }

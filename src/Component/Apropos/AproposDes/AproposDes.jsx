@@ -1,8 +1,10 @@
 import React from 'react';
 import './AproposDes.css';
+import { useNavigate } from 'react-router-dom';
 import ClientFeedBack from '../../HomePage/ClientFeedBack/ClientFeedBack';
 
 const AproposDes = () => {
+  const navigate = useNavigate();
   return (
     <div className="apropos-des-container">
        
@@ -19,24 +21,24 @@ const AproposDes = () => {
        </p>
 
        
-      <h3 >Our Features</h3>
+      <h3 style={{color:"#1B5C9E",fontSize:"2em"}}>Our<span style={{color:"#1BB13C"}}> Features</span> </h3>
       <div className="features-grid">
          
         <div className="feature-card">
-            <h4>Appointment Scheduling</h4>
+            <h4 style={{fontSize:"1.6em"}}>Appointment Scheduling</h4>
             <p>
             Simplify booking, rescheduling, and canceling appointments with an intuitive interface. Patients can choose their preferred service and time slot, ensuring a seamless and efficient experience. Additionally, we offer a dedicated feature for blood donation appointments, allowing patients to easily schedule their donation and contribute to a noble cause.
             </p>
         </div>
          
         <div className="feature-card">
-            <h4>Affordable Care</h4>
+            <h4 style={{fontSize:"1.6em"}}>Affordable Care</h4>
             <p>
                 We provide the best prices for medical services without compromising on quality. Our platform connects patients with highly experienced doctors, ensuring top-notch care at affordable rates.
             </p>
         </div>
         <div className="feature-card">
-            <h4>Experienced Doctors</h4>
+            <h4 style={{fontSize:"1.6em"}}>Experienced Doctors</h4>
             <p>
                 Access a network of the best and most experienced doctors in various fields. Our platform ensures that patients receive expert care tailored to their needs.
             </p>
@@ -45,14 +47,14 @@ const AproposDes = () => {
       </div>
 
        
-      <h3>What Our Patients Say</h3>
+       <br></br><br></br><br></br><br></br>
         <ClientFeedBack/>
 
        
       <div className="cta-section">
         <h3>Ready for treatment in MedLink?</h3>
         <p>Get started today and discover a new way to manage your healthcare.</p>
-        <button className="cta-button">Click here</button>
+        <button className="cta-button" onClick={() => navigate('/services')}>Click here</button>
       </div>
     </div>
   );

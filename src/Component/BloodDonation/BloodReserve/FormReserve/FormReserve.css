@@ -1,0 +1,41 @@
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.279);;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.Blood-btnn {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #1B5C9E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.Blood-btnn:hover {
+    background-color: #1BB13C;
+}
