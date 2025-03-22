@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {  useNavigate } from 'react-router-dom';
 import './HomeServices.css';
 import SwipeToSlide from '../CardServices/CardS';
 import DocGeniralist from '../../../assets/DocGeneralist2.svg';
@@ -13,6 +14,8 @@ import DocService3 from '../../../assets/DocService3.svg';
 import DocRadio from '../../../assets/DocService4.svg';
 
 export default function HomeServices() {
+    const navigate = useNavigate();
+
     const [searchTerm, setSearchTerm] = useState('');
 
     const services = [
@@ -100,8 +103,9 @@ export default function HomeServices() {
                             <h1>{service.name}</h1>
                         </div>
                         <div className="name2">
-                            <button id="ReadMoreS">{service.Readmore}</button>
-                            <button id="ReserveS">{service.Reserve}</button>
+                            <button id="ReadMoreS" onClick={() => navigate(`/readmore?service=${service.name}`)}>{service.Readmore}</button>
+                            <button id="ReserveS" onClick={() => navigate(`/reserve?service=${service.name}`)}>{service.Reserve}</button>
+
                         </div>
                     </div>
                     <div className="ServicesCard">

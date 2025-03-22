@@ -6,6 +6,8 @@ import Contact from './Pages/Contact';
 import Login from './Pages/Login/LoginPage/LoginPage';
 import BloodDonation from './Pages/BloodDonation';
 import Signup from './Pages/Login/SignupPage/SignupPage';
+import Reservation from './Pages/ReservationPage'
+import ReadMore from './Pages/ReadMorePage'
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path="/BloodDonation" element={<BloodDonation />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/reserve" element={<Reservation/>} />
+        <Route path="/readmore" element={<ReadMore/>} />
+        
       </Routes>
     </Router>
   );

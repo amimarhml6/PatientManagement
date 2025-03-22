@@ -1,41 +1,59 @@
-.form-container {
-    max-width: 500px;
+.blood-form-container {
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 10px;
-    background: #f9f9f9;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.279);;
+    background: #ffffff;
+ 
 }
 
-form {
+.blood-form-title {
+    color: #1B5C9E;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 34px;
+}
+
+.blood-grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.blood-form-group {
     display: flex;
     flex-direction: column;
 }
 
+.blood-full-width {
+    grid-column: span 2;
+}
+
 label {
-    margin-top: 10px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input, select {
-    padding: 8px;
-    margin-top: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
 }
 
-.Blood-btnn {
-    margin-top: 15px;
+.blood-btn {
+    grid-column: span 2;
     padding: 10px;
     background-color: #1B5C9E;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.Blood-btnn:hover {
+.blood-btn:hover {
     background-color: #1BB13C;
 }
