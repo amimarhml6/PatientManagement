@@ -27,20 +27,20 @@ function SwipeToSlide() {
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-        <CardServices image={dentist} name="Dentist doctors" desc="Our Dentist team is highly skilled and experienced in providing comprehensive oral care. They are always ready to assist you with your dental health needs."/>
+        <CardServices image={dentist} name="Dentist Service" desc="Our Dentist team is highly skilled and experienced in providing comprehensive oral care. They are always ready to assist you with your dental health needs."/>
         </div>
         <div>
-        <CardServices image={generaliste} name="generalist doctors" desc="Our General Practitioner team is highly skilled and experienced in providing comprehensive primary care. They are always ready to assist you with your health concerns."/>
+        <CardServices image={generaliste} name="Generalist Service" desc="Our General Practitioner team is highly skilled and experienced in providing comprehensive primary care. They are always ready to assist you with your health concerns."/>
         </div>
         <div>
-        <CardServices image={chirurgie} name="surgery doctors" desc="Our Surgery team consists of expert surgeons dedicated to performing precise and effective procedures. They are always prepared to provide the best surgical care."/>
+        <CardServices image={chirurgie} name="Surgery Service" desc="Our Surgery team consists of expert surgeons dedicated to performing precise and effective procedures. They are always prepared to provide the best surgical care."/>
         </div>
         <div>
-        <CardServices image={hematology} name="hematology doctors" desc="Our Hematology team is highly skilled and experienced in diagnosing and treating blood disorders. They are always ready to assist you with your health concerns."/>
+        <CardServices image={hematology} name="Hematology Service" desc="Our Hematology team is highly skilled and experienced in diagnosing and treating blood disorders. They are always ready to assist you with your health concerns."/>
         </div>
         <div> 
-          {/* photo nbdlha */}
-        <CardServices image={radiologue} name="radiologist doctors" desc="Our Radiology team is highly skilled and experienced in performing advanced medical imaging. They are always ready to assist you with your health concerns."/>
+          
+        <CardServices image={radiologue} name="Radiologist Service" desc="Our Radiology team is highly skilled and experienced in performing advanced medical imaging. They are always ready to assist you with your health concerns."/>
         </div>
         
 

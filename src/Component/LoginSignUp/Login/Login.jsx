@@ -17,7 +17,7 @@ function Login() {
   useEffect(() => {
     localStorage.setItem('Login', 'false');
     localStorage.removeItem('userConnected');
-    localStorage.setItem('posts', JSON.stringify([]));
+
   }, []);
 
   const [emailValid, setEmailValid] = useState(true);
@@ -57,7 +57,7 @@ function Login() {
     }
 
     localStorage.setItem('Login', 'true');
-    localStorage.setItem('userConnected', existingUser.fullName); 
+    localStorage.setItem('userConnected', existingUser.email); 
 
     navigate('/Home'); 
   };

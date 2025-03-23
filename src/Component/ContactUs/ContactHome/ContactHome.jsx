@@ -15,11 +15,11 @@ export default function ContactHome() {
                 
             </div>
 
-            <div className="contact-form">
+            <form className="contact-form">
                 <input type="email" placeholder="Your Email" className="input-field" />
                 <textarea placeholder="Your Content Here" className="textarea-field"></textarea>
                 <button className="send-button">Send</button>
-            </div>
+            </form>
 
             <div className="contact-person">
                 

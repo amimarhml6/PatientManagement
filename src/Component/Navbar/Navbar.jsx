@@ -1,17 +1,37 @@
 import { Link, useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import './Navbar.css';
 import MedlinkLogo from "../../assets/Design.png";
-import 'boxicons'
+import 'boxicons';
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const [scrolled, setScrolled] = useState(false);
+  const isLogged = JSON.parse(localStorage.getItem("Login"));
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-brand">
         <Link to="/Home" className="brand-link">
           <img src={MedlinkLogo} alt="Medlink Logo" className="logo" />
-          <span className="brand-name" style={{color:"#1B5C9E"}}>Med<span className="brand-name" style={{color:"#1BB13C"}}>Link</span></span>
+          <span className="brand-name" style={{color:"#1B5C9E"}}>Med
+            <span className="brand-name" style={{color:"#1BB13C"}}>Link</span>
+          </span>
         </Link>
       </div>
 
@@ -24,7 +44,13 @@ export default function Navbar() {
       </div>
 
       <div className='log' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '25px', marginRight: "100px" }}>
-        <button className="nav-link" id='login' onClick={() => navigate('/login')}><i className='bx bxs-user-circle'></i></button>
+        {isLogged ? (
+          <button className="button-85" role="button" onClick={() => navigate('/login')}>Log Out</button>
+        ) : (
+          <button className="nav-link" id='login' onClick={() => navigate('/login')}>
+            <i className='bx bxs-user-circle'></i>
+          </button>
+        )}
       </div>
     </nav>
   );

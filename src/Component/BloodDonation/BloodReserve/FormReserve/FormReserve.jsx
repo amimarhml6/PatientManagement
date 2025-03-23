@@ -1,7 +1,11 @@
 import { useState } from "react";
 import "./FormReserve.css";
+import { useNavigate } from 'react-router-dom';
+
 
 export default function FormReserve() {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -11,6 +15,8 @@ export default function FormReserve() {
         date: "",
         hour: "",
     });
+
+    const isLogged = JSON.parse(localStorage.getItem("Login"));
 
     const today = new Date();
     today.setDate(today.getDate() + 1);
@@ -36,6 +42,7 @@ export default function FormReserve() {
 
     return (
         <div className="blood-form-container">
+            {isLogged ? (""):(<p style={{color:"red"}}>Please Go to Login Page</p>)}
             <h1 className="blood-form-title" style={{color:"#1B5C9E"}}>Book a <span style={{color:"#1BB13C"}}>Blood Donation</span> </h1>
             <form onSubmit={handleSubmit} className="blood-grid-form">
                 <div className="blood-form-group">
@@ -85,8 +92,12 @@ export default function FormReserve() {
                         ))}
                     </select>
                 </div>
-
-                <button type="submit" className="blood-btn">Reserve</button>
+                {(isLogged)?(
+                    <button type="submit" className="blood-btn">Reserve</button>
+                ):(
+                    <button type="submit" className="blood-btn" onClick={() => navigate('/login')}>Reserve</button>
+                )}
+                
             </form>
         </div>
     );
