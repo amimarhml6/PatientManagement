@@ -16,6 +16,8 @@ import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
+import { useLocation } from "react-router-dom";
+
 
 function TablePaginationActions(props) {
   const theme = useTheme();
@@ -117,10 +119,16 @@ export default function CustomPaginationActionsTable() {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const emailUser = localStorage.getItem('userConnected');
-    const storedAppointments = JSON.parse(localStorage.getItem('appointments')) || []; // Récupérer et parser
-    const filteredRows = storedAppointments.filter(row => row.email === emailUser);
+    const storedAppointments = JSON.parse(localStorage.getItem('appointments')) || []; 
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    const selectedService = searchParams.get("service") || "";
+    
+    const filteredRows = storedAppointments.filter(row => row.email === emailUser && row.service === selectedService );
 
     const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredRows.length) : 0;
+
+
 
  
 

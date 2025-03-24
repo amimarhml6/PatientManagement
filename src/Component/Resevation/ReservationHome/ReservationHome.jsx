@@ -69,6 +69,17 @@ export default function ReservationHome({onAddAppointment}) {
         e.preventDefault();
         console.log("Réservation soumise :", formData);
         onAddAppointment(formData);
+        setFormData({
+            name: "",
+            surname: "",
+            email: emailUser,
+            phone: "",
+            service: selectedService,
+            date: "",
+            time: "",
+            Statut: "Pending"
+        });
+        
     };
     const isLogged = JSON.parse(localStorage.getItem("Login"));
 
