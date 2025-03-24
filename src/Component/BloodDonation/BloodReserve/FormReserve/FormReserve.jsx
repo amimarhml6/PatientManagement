@@ -5,12 +5,12 @@ import { useNavigate } from 'react-router-dom';
 
 export default function FormReserve() {
     const navigate = useNavigate();
-
+    const emailUser = localStorage.getItem("userConnected")
     const [formData, setFormData] = useState({
         firstName: "",
         lastName: "",
         phoneNumber: "",
-        email: "",
+        email: emailUser,
         bloodGroup: "",
         date: "",
         hour: "",
@@ -47,21 +47,21 @@ export default function FormReserve() {
             <form onSubmit={handleSubmit} className="blood-grid-form">
                 <div className="blood-form-group">
                     <label>First Name:</label>
-                    <input type="text" name="firstName" required onChange={handleChange} />
+                    <input type="text" name="firstName" required value ={formData.firstName} onChange={handleChange} />
                 </div>
                 <div className="blood-form-group">
                     <label>Last Name:</label>
-                    <input type="text" name="lastName" required onChange={handleChange} />
+                    <input type="text" name="lastName" required value ={formData.lastName} onChange={handleChange} />
                 </div>
 
                 <div className="blood-form-group blood-full-width">
                     <label>Phone Number:</label>
-                    <input type="tel" name="phoneNumber" required onChange={handleChange} />
+                    <input type="tel" name="phoneNumber" required value ={formData.phoneNumber} onChange={handleChange} />
                 </div>
 
                 <div className="blood-form-group blood-full-width">
                     <label>Email:</label>
-                    <input type="email" name="email" required onChange={handleChange} />
+                    <input type="email" name="email" value ={formData.email} required disabled />
                 </div>
 
                 <div className="blood-form-group blood-full-width">

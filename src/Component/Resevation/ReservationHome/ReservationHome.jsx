@@ -7,21 +7,23 @@ import ReservationSurgery from "../../../assets/ReservationSurgey.svg";
 import ReservationHema from "../../../assets/ReservationHematologue.svg";
 import ReservationRadiologue from "../../../assets/ReservationRadiologue.svg";
 
-export default function ReservationHome() {
+export default function ReservationHome({onAddAppointment}) {
     const navigate = useNavigate();
 
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
     const selectedService = queryParams.get("service") || "";
+    const emailUser = localStorage.getItem("userConnected")
 
     const [formData, setFormData] = useState({
         name: "",
         surname: "",
-        email: "",
+        email: emailUser,
         phone: "",
         service: selectedService,
         date: "",
-        time: ""
+        time: "",
+        Statut:"Pending"
     });
 
     const [availableTimes, setAvailableTimes] = useState([]);
@@ -41,6 +43,7 @@ export default function ReservationHome() {
 
     useEffect(() => {
         generateTimeSlots();
+       
     }, []);
 
     const generateTimeSlots = () => {
@@ -65,6 +68,7 @@ export default function ReservationHome() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Réservation soumise :", formData);
+        onAddAppointment(formData);
     };
     const isLogged = JSON.parse(localStorage.getItem("Login"));
 
@@ -78,7 +82,7 @@ export default function ReservationHome() {
                 <form onSubmit={handleSubmit}>
                     <input type="text" name="name" placeholder="First Name" value={formData.name} onChange={handleChange} required />
                     <input type="text" name="surname" placeholder="Last Name" value={formData.surname} onChange={handleChange} required />
-                    <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+                    <input type="email" name="email" placeholder="Email" value={formData.email} disabled />
                     <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
                     <input type="text" name="service" value={formData.service} disabled />
 
