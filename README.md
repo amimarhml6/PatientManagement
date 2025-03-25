@@ -28,19 +28,33 @@ A modern and responsive **Patient Management Dashboard** built using **React**, 
 
 ## 🚀 Getting Started
 
-### 1. Clone the repository
+### 1. Install Node.js & npm
+
+If you haven't already, download and install Node.js (which includes npm):
+
+👉 [https://nodejs.org](https://nodejs.org)
+
+- Download the **LTS version** for your operating system.
+- During installation, **make sure to check**: ✅ “Add to PATH”
+- After installation, verify it with:
 
 ```bash
-git clone https://github.com/Zakaria-BOUDHANE/PatientManagment.git
-cd PatientManagment
-```
+node -v
+npm -v
 
 ### 2. Install dependencies
 
 ```bash
 npm install
 ```
+### 2. Clone the repository
 
+```bash
+git clone https://github.com/Zakaria-BOUDHANE/PatientManagment.git
+```
+```bash
+cd PatientManagment
+```
 ### 3. Run the development server
 
 ```bash
