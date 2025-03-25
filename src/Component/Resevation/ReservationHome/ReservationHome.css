@@ -20,7 +20,7 @@
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 input, select, button {
@@ -34,4 +34,13 @@ input, select, button {
 
 .right img {
     width: 100%;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row input, .form-row select {
+    flex: 1; /* Permet aux inputs d'avoir la même largeur */
 }

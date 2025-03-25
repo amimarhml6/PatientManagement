@@ -149,7 +149,7 @@ export default function CustomPaginationActionsTable() {
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
-            {['First Name', 'Last Name', 'Email', 'Number', 'Service', 'Date and Time', 'Status'].map((header) => (
+            {['First Name', 'Last Name', 'Email', 'Phone Number', 'Service', 'Date and Time', 'Status'].map((header) => (
               <TableCell key={header} sx={{ fontWeight: 'bold' }}>{header}</TableCell>
             ))}
           </TableRow>
@@ -158,12 +158,12 @@ export default function CustomPaginationActionsTable() {
             
         {(rowsPerPage > 0 ? sortedRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : sortedRows).map((row, index) => (
             <TableRow key={index}>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.surname}</TableCell>
+              <TableCell>{row.firstname}</TableCell>
+              <TableCell>{row.lastname}</TableCell>
               <TableCell>{row.email}</TableCell>
-              <TableCell>{row.phone}</TableCell>
+              <TableCell>{row.phoneNumber}</TableCell>
               <TableCell>{row.service}</TableCell>
-              <TableCell>{row.date} {row.time}</TableCell>
+              <TableCell>{row.date} {row.hour}</TableCell>
               <TableCell sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <span style={statusStyles.Pending }>{row.Statut}</span>
               </TableCell>
@@ -203,4 +203,4 @@ export default function CustomPaginationActionsTable() {
       </Table>
     </TableContainer>
   );
-}
+}

@@ -16,15 +16,17 @@ export default function ReservationHome({onAddAppointment}) {
     const emailUser = localStorage.getItem("userConnected")
 
     const [formData, setFormData] = useState({
-        name: "",
-        surname: "",
+        firstname: "",
+        lastname: "",
         email: emailUser,
-        phone: "",
+        phoneNumber: "",
         service: selectedService,
         date: "",
-        time: "",
+        hour: "",
         Statut:"Pending"
     });
+    const [Submits, setSubmits] = useState(false);
+    const isLogged = JSON.parse(localStorage.getItem("Login"));
 
     const [availableTimes, setAvailableTimes] = useState([]);
 
@@ -70,57 +72,69 @@ export default function ReservationHome({onAddAppointment}) {
         console.log("Réservation soumise :", formData);
         onAddAppointment(formData);
         setFormData({
-            name: "",
-            surname: "",
+            firstname: "",
+            lastname: "",
             email: emailUser,
-            phone: "",
+            phoneNumber: "",
             service: selectedService,
             date: "",
-            time: "",
-            Statut: "Pending"
+            hour: "",
+            Statut:"Pending"
         });
+        setSubmits(true);
+        setTimeout(() => {
+            setSubmits(false);
+        }, 5000);
         
     };
-    const isLogged = JSON.parse(localStorage.getItem("Login"));
+
 
 
     return (
         <div className="Reservation">
              
             <div className="left">
-            {isLogged ? (""):(<p style={{color:"red"}}>Please Go to Login Page</p>)}
+            
                 <h2 style={{color:"#1B5C9E"}}>Book your <span style={{color:"#1BB13C"}}>appointment</span></h2>
                 <form onSubmit={handleSubmit}>
-                    <input type="text" name="name" placeholder="First Name" value={formData.name} onChange={handleChange} required />
-                    <input type="text" name="surname" placeholder="Last Name" value={formData.surname} onChange={handleChange} required />
+               
+                    <div className="form-row">
+                        <input type="text" name="firstname" placeholder="First Name" value={formData.firstname} onChange={handleChange} required />
+                        <input type="text" name="lastname" placeholder="Last Name" value={formData.lastname} onChange={handleChange} required />
+                    </div>
+
                     <input type="email" name="email" placeholder="Email" value={formData.email} disabled />
-                    <input type="tel" name="phone" placeholder="Phone Number" value={formData.phone} onChange={handleChange} required />
+                    <input type="tel" name="phoneNumber" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} required />
                     <input type="text" name="service" value={formData.service} disabled />
 
-                    <input 
-                        type="date" 
-                        name="date" 
-                        min={new Date(Date.now() + 86400000).toISOString().split("T")[0]} 
-                        value={formData.date} 
-                        onChange={handleChange} 
-                        required 
-                    />
+                     
+                    <div className="form-row">
+                        <input 
+                            type="date" 
+                            name="date" 
+                            min={new Date(Date.now() + 86400000).toISOString().split("T")[0]} 
+                            value={formData.date} 
+                            onChange={handleChange} 
+                            required 
+                        />
+                        <select name="hour" value={formData.hour} onChange={handleChange} required>
+                            <option value="">Select a hour</option>
+                            {availableTimes.map((time, index) => (
+                                <option key={index} value={time}>{time}</option>
+                            ))}
+                        </select>
+                    </div>
 
-                    <select name="time" value={formData.time} onChange={handleChange} required>
-                        <option value="">Select a time</option>
-                        {availableTimes.map((time, index) => (
-                            <option key={index} value={time}>{time}</option>
-                        ))}
-                    </select>
-
+                    {isLogged ? (""):(<p style={{color:"red",fontWeight: "500",padding:"10px 0px 0px 0px"}}>Please Go to Login Page</p>)}
+                    {Submits && <p style={{ color: "#1BB13C", textAlign: "center", fontWeight: "500",padding:"10px 0px 0px 0px"}}>Reservation Successfully</p>}
                     
-
                     {(isLogged)?(
                         <button type="submit">Reserve Now</button>
                     ):(
                         <button type="submit" onClick={() => navigate('/login')}>Reserve Now</button>
                     )}
                 </form>
+
             </div>
 
             <div className="right">

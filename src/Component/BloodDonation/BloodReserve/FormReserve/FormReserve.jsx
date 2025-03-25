@@ -16,6 +16,7 @@ export default function FormReserve({onAddAppointments}) {
         hour: "",
         Statut:"Pending"
     });
+    const [Submits, setSubmits] = useState(false);
 
     const isLogged = JSON.parse(localStorage.getItem("Login"));
 
@@ -51,11 +52,15 @@ export default function FormReserve({onAddAppointments}) {
             hour: "",
             Statut:"Pending"
         })
+        setSubmits(true);
+        setTimeout(() => {
+            setSubmits(false);
+        }, 5000);
     };
 
     return (
         <div className="blood-form-container">
-            {isLogged ? (""):(<p style={{color:"red"}}>Please Go to Login Page</p>)}
+            
             <h1 className="blood-form-title" style={{color:"#1B5C9E"}}>Book a <span style={{color:"#1BB13C"}}>Blood Donation</span> </h1>
             <form onSubmit={handleSubmit} className="blood-grid-form">
                 <div className="blood-form-group">
@@ -105,12 +110,15 @@ export default function FormReserve({onAddAppointments}) {
                             <option key={index} value={time}>{time}</option>
                         ))}
                     </select>
+                    {isLogged ? (""):(<p style={{color:"red",fontWeight: "500",padding:"10px 0px 0px 0px"}}>Please Go to Login Page</p>)}
+                    {Submits && <p style={{ color: "#1BB13C", textAlign: "center", fontWeight: "500",padding:"10px 0px 0px 0px"}}>Reservation Successfully</p>}
                 </div>
                 {(isLogged)?(
                     <button type="submit" className="blood-btn">Reserve</button>
                 ):(
                     <button type="submit" className="blood-btn" onClick={() => navigate('/login')}>Reserve</button>
                 )}
+                
                 
             </form>
         </div>
