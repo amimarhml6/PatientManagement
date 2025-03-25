@@ -31,7 +31,7 @@ A modern and responsive **Patient Management Dashboard** built using **React**, 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/PatientManagment.git
+git clone https://github.com/Zakaria-BOUDHANE/PatientManagment.git
 cd PatientManagment
 ```
 
