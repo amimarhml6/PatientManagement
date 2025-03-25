@@ -3,10 +3,10 @@ import "./FormReserve.css";
 import { useNavigate } from 'react-router-dom';
 
 
-export default function FormReserve() {
+export default function FormReserve({onAddAppointments}) {
     const navigate = useNavigate();
     const emailUser = localStorage.getItem("userConnected")
-    const [formData, setFormData] = useState({
+    const [formsData, setformsData] = useState({
         firstName: "",
         lastName: "",
         phoneNumber: "",
@@ -14,6 +14,7 @@ export default function FormReserve() {
         bloodGroup: "",
         date: "",
         hour: "",
+        Statut:"Pending"
     });
 
     const isLogged = JSON.parse(localStorage.getItem("Login"));
@@ -32,12 +33,24 @@ export default function FormReserve() {
     const timeSlots = generateTimeSlots();
 
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setformsData({ ...formsData, [e.target.name]: e.target.value });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Form Data:", formData);
+        console.log("Form Data:", formsData);
+        onAddAppointments(formsData);
+        
+        setformsData({
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            email: emailUser,
+            bloodGroup: "",
+            date: "",
+            hour: "",
+            Statut:"Pending"
+        })
     };
 
     return (
@@ -47,26 +60,26 @@ export default function FormReserve() {
             <form onSubmit={handleSubmit} className="blood-grid-form">
                 <div className="blood-form-group">
                     <label>First Name:</label>
-                    <input type="text" name="firstName" required value ={formData.firstName} onChange={handleChange} />
+                    <input type="text" name="firstName" required value ={formsData.firstName} onChange={handleChange} />
                 </div>
                 <div className="blood-form-group">
                     <label>Last Name:</label>
-                    <input type="text" name="lastName" required value ={formData.lastName} onChange={handleChange} />
+                    <input type="text" name="lastName" required value ={formsData.lastName} onChange={handleChange} />
                 </div>
 
                 <div className="blood-form-group blood-full-width">
                     <label>Phone Number:</label>
-                    <input type="tel" name="phoneNumber" required value ={formData.phoneNumber} onChange={handleChange} />
+                    <input type="tel" name="phoneNumber" required value ={formsData.phoneNumber} onChange={handleChange} />
                 </div>
 
                 <div className="blood-form-group blood-full-width">
                     <label>Email:</label>
-                    <input type="email" name="email" value ={formData.email} required disabled />
+                    <input type="email" name="email" value ={formsData.email} required disabled />
                 </div>
 
                 <div className="blood-form-group blood-full-width">
                     <label>Blood Group:</label>
-                    <select name="bloodGroup" required onChange={handleChange}>
+                    <select name="bloodGroup" required onChange={handleChange} value={formsData.bloodGroup}>
                         <option value="">Select...</option>
                         <option value="A+">A+</option>
                         <option value="A-">A-</option>
@@ -81,11 +94,12 @@ export default function FormReserve() {
 
                 <div className="blood-form-group">
                     <label>Date:</label>
-                    <input type="date" name="date" required min={minDate} onChange={handleChange} />
+                    <input type="date" name="date" required min={minDate} onChange={handleChange} value={formsData.date} />
+
                 </div>
                 <div className="blood-form-group">
                     <label>Hour:</label>
-                    <select name="hour" required onChange={handleChange}>
+                    <select name="hour" required onChange={handleChange} value={formsData.hour}>
                         <option value="">Select a time...</option>
                         {timeSlots.map((time, index) => (
                             <option key={index} value={time}>{time}</option>

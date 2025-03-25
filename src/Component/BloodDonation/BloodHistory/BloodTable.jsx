@@ -16,7 +16,7 @@ import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LastPageIcon from '@mui/icons-material/LastPage';
-import { useLocation } from "react-router-dom";
+
 
 
 function TablePaginationActions(props) {
@@ -119,15 +119,12 @@ export default function CustomPaginationActionsTable() {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(5);
     const emailUser = localStorage.getItem('userConnected');
-    const storedAppointments = JSON.parse(localStorage.getItem('appointments')) || []; 
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const selectedService = searchParams.get("service") || "";
-    
-    const filteredRows = storedAppointments.filter(row => row.email === emailUser && row.service === selectedService );
+    const storedAppointments = JSON.parse(localStorage.getItem('Bloodappointment')) || []; 
+    const filteredRows = storedAppointments.filter(row => row.email === emailUser);
     const sortedRows = [...filteredRows].sort((a, b) => 
       new Date(`${a.date} ${a.hour}`) - new Date(`${b.date} ${b.hour}`)
-    );
+  );
+
     const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - filteredRows.length) : 0;
 
 
@@ -149,7 +146,7 @@ export default function CustomPaginationActionsTable() {
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow sx={{ backgroundColor: '#f5f5f5' }}>
-            {['First Name', 'Last Name', 'Email', 'Number', 'Service', 'Date and Time', 'Status'].map((header) => (
+            {['First Name', 'Last Name', 'Email', 'Number', 'Blood Group', 'Date and Time', 'Status'].map((header) => (
               <TableCell key={header} sx={{ fontWeight: 'bold' }}>{header}</TableCell>
             ))}
           </TableRow>
@@ -158,12 +155,12 @@ export default function CustomPaginationActionsTable() {
             
         {(rowsPerPage > 0 ? sortedRows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) : sortedRows).map((row, index) => (
             <TableRow key={index}>
-              <TableCell>{row.name}</TableCell>
-              <TableCell>{row.surname}</TableCell>
+              <TableCell>{row.firstName}</TableCell>
+              <TableCell>{row.lastName}</TableCell>
               <TableCell>{row.email}</TableCell>
-              <TableCell>{row.phone}</TableCell>
-              <TableCell>{row.service}</TableCell>
-              <TableCell>{row.date} {row.time}</TableCell>
+              <TableCell>{row.phoneNumber}</TableCell>
+              <TableCell>{row.bloodGroup}</TableCell>
+              <TableCell>{row.date} {row.hour}</TableCell>
               <TableCell sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <span style={statusStyles.Pending }>{row.Statut}</span>
               </TableCell>

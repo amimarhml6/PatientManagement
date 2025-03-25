@@ -1,18 +1,3 @@
-// import Navbar from "../Component/Navbar/Navbar";
-// import ReservationHome from '../Component/Resevation/ReservationHome/ReservationHome'
-// import ReservationHistory from '../Component/Resevation/ReservationHistory/ReservationHistory'
-// import Footer from '../Component/Footer/Footer'
-
-// export default function ReservationPage() {
-//     return (
-//         <div>
-//             <Navbar/>
-//             <ReservationHome/>
-//             <ReservationHistory/>
-//             <Footer/>
-//         </div>
-//     );
-// }
 import { useState ,useEffect} from "react";
 import Navbar from "../Component/Navbar/Navbar";
  import ReservationHome from '../Component/Resevation/ReservationHome/ReservationHome'
