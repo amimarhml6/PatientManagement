@@ -170,3 +170,10 @@ button {
 button:hover {
     background: #1B5C9E;
 }
+.buttonRemove{
+    background-color: red;
+    padding: 4px 9px;
+}
+.buttonRemove:hover{
+    background-color: rgb(249, 115, 115);
+}

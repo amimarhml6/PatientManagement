@@ -10,15 +10,18 @@ import avatar3 from "../../../assets/avatar3.jpg";
 const ClientFeedBack = () => {
   const avatars = [avatar1, avatar2, avatar3];
 
-  // Charger les feedbacks depuis localStorage ou utiliser les valeurs par défaut
+  // Récupérer l'email de l'utilisateur connecté
+  const emailUser = localStorage.getItem("userConnected");
+
+  // Charger les feedbacks depuis localStorage ou valeurs par défaut
   const getStoredFeedbacks = () => {
-    const storedFeedbacks = JSON.parse(localStorage.getItem("FeedbackClinic"));
-    return storedFeedbacks && storedFeedbacks.length > 0
+    const storedFeedbacks = JSON.parse(localStorage.getItem("FeedbackClinic")) || [];
+    return storedFeedbacks.length > 0
       ? storedFeedbacks
       : [
-          { name: "John Doe", rating: 5, comment: "I had a great", avatar: avatar1 },
-          { name: "Alex Doe", rating: 4, comment: "good experience", avatar: avatar2 },
-          { name: "Lucy Doe", rating: 5, comment: "You are the best", avatar: avatar3 },
+          { name: "John Doe", rating: 5, comment: "I had a great", avatar: avatar1, email: "amar@gmail.com" },
+          { name: "Alex Doe", rating: 4, comment: "good experience", avatar: avatar2, email: "amar@gmail.com" },
+          { name: "Lucy Doe", rating: 5, comment: "You are the best", avatar: avatar3, email: "amar@gmail.com" },
         ];
   };
 
@@ -27,17 +30,18 @@ const ClientFeedBack = () => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
 
-  // Sauvegarde automatique dans localStorage si feedbacks change
+  // Sauvegarde automatique dans localStorage quand feedbacks change
   useEffect(() => {
     localStorage.setItem("FeedbackClinic", JSON.stringify(feedbacks));
   }, [feedbacks]);
 
+  // Ajouter un feedback
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || rating === 0 || !comment) return;
 
     const avatarIndex = feedbacks.length % avatars.length;
-    const newFeedback = { name, rating, comment, avatar: avatars[avatarIndex] };
+    const newFeedback = { name, rating, comment, avatar: avatars[avatarIndex], email: emailUser };
 
     setFeedbacks([...feedbacks, newFeedback]);
 
@@ -46,6 +50,13 @@ const ClientFeedBack = () => {
     setRating(0);
     setComment("");
   };
+
+
+  const handleRemove = (index) => {
+    const updatedFeedbacks = feedbacks.filter((fb, i) => i !== index || fb.email !== emailUser);
+    setFeedbacks(updatedFeedbacks);
+  };
+
 
   const isLogged = JSON.parse(localStorage.getItem("Login"));
 
@@ -74,6 +85,11 @@ const ClientFeedBack = () => {
                 </div>
               </div>
               <p className="feedback-comment">{fb.comment}</p>
+
+              
+              {fb.email === emailUser && (
+                <button className="buttonRemove" onClick={() => handleRemove(index)}>Remove</button>
+              )}
             </CardContent>
           </Card>
         ))}
