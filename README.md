@@ -41,7 +41,7 @@ If you haven't already, download and install Node.js (which includes npm):
 ```bash
 node -v
 npm -v
-
+```
 ### 2. Install dependencies
 
 ```bash
