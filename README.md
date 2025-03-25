@@ -1,4 +1,3 @@
-# React + Vite
 
 🏥 MedLink – Patient Management Dashboard (Frontend)
 
