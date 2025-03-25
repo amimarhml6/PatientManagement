@@ -42,11 +42,7 @@ If you haven't already, download and install Node.js (which includes npm):
 node -v
 npm -v
 ```
-### 2. Install dependencies
 
-```bash
-npm install
-```
 ### 2. Clone the repository
 
 ```bash
@@ -55,13 +51,18 @@ git clone https://github.com/Zakaria-BOUDHANE/PatientManagment.git
 ```bash
 cd PatientManagment
 ```
-### 3. Run the development server
+### 3. Install dependencies
+
+```bash
+npm install
+```
+### 4. Run the development server
 
 ```bash
 npm run dev
 ```
 
-### 4. Open in your browser
+### 5. Open in your browser
 
 Go to: `http://localhost:5173`
 
