@@ -17,7 +17,7 @@ export default function HomeServices() {
     const [searchTerm, setSearchTerm] = useState('');
     const [services, setServices] = useState([]);
 
-    const isLogged = JSON.parse(localStorage.getItem("Login"));
+
 
     useEffect(() => {
         const storedServices = localStorage.getItem('servicesData');
@@ -124,11 +124,10 @@ export default function HomeServices() {
                                 {service.Readmore}
                             </button>
 
-                            {(isLogged)?(<button id="ReserveS" onClick={() => navigate(`/reserve?service=${service.name}`)}>
+                            <button id="ReserveS" onClick={() => navigate(`/reserve?service=${service.name}`)}>
                                 {service.Reserve}
                             </button>
-                            ):""
-                            }
+                            
                         </div>
                     </div>
                     <div className="ServicesCard">

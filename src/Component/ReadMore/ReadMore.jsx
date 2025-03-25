@@ -7,7 +7,7 @@ export default function ReadMore() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [service, setService] = useState(null);
-    const isLogged = JSON.parse(localStorage.getItem("Login"));
+
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -34,11 +34,10 @@ export default function ReadMore() {
             <section className="description-section">
                 <p>{service.description || `Learn more about our specialized ${service.name} services.`}</p>
 
-                {(isLogged)?(<button className="reserve-btn" onClick={() => navigate(`/reserve?service=${encodeURIComponent(service.name)}`)}>
+                <button className="reserve-btn" onClick={() => navigate(`/reserve?service=${encodeURIComponent(service.name)}`)}>
                     Reserve Now
                 </button>
-                ):""
-                }
+                
                 
             </section>
 

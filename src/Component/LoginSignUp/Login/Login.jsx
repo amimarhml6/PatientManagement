@@ -15,6 +15,7 @@ function Login() {
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     localStorage.setItem('Login', 'false');
     localStorage.removeItem('userConnected');
 
