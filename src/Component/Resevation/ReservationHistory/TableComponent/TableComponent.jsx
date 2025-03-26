@@ -165,7 +165,7 @@ export default function CustomPaginationActionsTable() {
               <TableCell>{row.service}</TableCell>
               <TableCell>{row.date} {row.hour}</TableCell>
               <TableCell sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <span style={statusStyles.Pending }>{row.Statut}</span>
+              <span style={statusStyles[row.Statut] || statusStyles.Default}>{row.Statut}</span>
               </TableCell>
             </TableRow>
           ))}
@@ -203,4 +203,4 @@ export default function CustomPaginationActionsTable() {
       </Table>
     </TableContainer>
   );
-}
+}

@@ -7,6 +7,7 @@ import 'boxicons';
 export default function Navbar() {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const isLogged = JSON.parse(localStorage.getItem("Login"));
 
   useEffect(() => {
@@ -41,6 +42,20 @@ export default function Navbar() {
         <Link to="/BloodDonation" className="nav-link">BloodDonation</Link>
         <Link to="/propos" className="nav-link">A propos</Link>
         <Link to="/contact" className="nav-link">Contact Us</Link>
+        <div 
+          className="dropdown" 
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <button className="dropdown-button">Admin ▼</button>
+          {dropdownOpen && (
+            <div className="dropdown-content">
+              <Link to="/Appointement" className="dropdown-item">Appointement</Link>
+              <Link to="/AdminsManagement" className="dropdown-item">Admins Management</Link>
+              <Link to="/ServicesManagement" className="dropdown-item">Services Management</Link>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className='log' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '25px', marginRight: "100px" }}>

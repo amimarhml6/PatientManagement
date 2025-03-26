@@ -1,0 +1,143 @@
+.statistique-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 30px; 
+    margin-top: 30px;
+
+}
+
+.Statistics-co {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.256);
+    border-radius: 12px;
+ 
+}
+
+ 
+.statistique-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    padding-bottom: 15px;
+}
+#Blood{
+    margin-right: 100px;
+}
+#Care{
+    margin-left: 100px;
+    
+}
+
+
+.statistique-title {
+    font-size: 27px;
+    font-weight: bold;
+    color: #1B5C9E;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top:20px;
+}
+
+
+.chart-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+.pie-chart-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.recharts-layer text {
+    font-size: 14px;
+    font-weight: bold;
+    fill: #333;
+}
+
+.details-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+
+.details-item {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+
+.color-box {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+
+.custom-tooltip p {
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 100px; 
+    min-height: 40px; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .Statistics-co {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .statistique-section {
+        width: 90%;
+    }
+
+    .chart-info-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .details-container {
+        padding-left: 0;
+        align-items: center;
+    }
+}
+
+
+.color-box{
+    color: #0088FE #00C49F #FFBB28 #ff5906 #A28DFF #7a7a7a #d25af4;
+}

@@ -8,6 +8,9 @@ import BloodDonation from './Pages/BloodDonation';
 import Signup from './Pages/Login/SignupPage/SignupPage';
 import Reservation from './Pages/ReservationPage'
 import ReadMore from './Pages/ReadMorePage'
+import AdminsManagementPage from './Pages/AdminPanel/AdminsManagementPage';
+import ServicesManagementPage from './Pages/AdminPanel/ServicesManagementPage';
+import AppointmentPage from './Pages/AdminPanel/AppointmentPage'; 
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
         <Route path="/signup" element={<Signup/>} />
         <Route path="/reserve" element={<Reservation/>} />
         <Route path="/readmore/:id" element={<ReadMore/>} />
+        <Route path="/Appointement" element={<AppointmentPage/>} />
+        <Route path="/AdminsManagement" element={<AdminsManagementPage/>} />
+        <Route path="/ServicesManagement" element={<ServicesManagementPage/>} />
         
       </Routes>
     </Router>
