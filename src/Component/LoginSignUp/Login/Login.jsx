@@ -14,10 +14,51 @@ function Login() {
 
   const [errorMessage, setErrorMessage] = useState("");
 
+  const initialUser=[
+    {
+        email:"amarhml@gmail.com",
+        fullName:"Amar",
+        password:"123456"
+    },
+    {
+        email:"ramy@gmail.com",
+        fullName:"Ramy",
+        password:"123456"
+    },
+    {
+        email:"abdou@gmail.com",
+        fullName:"Abdou",
+        Password:"123456"
+    }
+  ]
+
+  const initialAdmin = [
+    {
+        email: "amarhml@gmail.com",
+        fullName: "Amar"
+    },
+    {
+        email: "ramy@gmail.com",
+        fullName: "Ramy"
+    },
+    {
+        email: "abdou@gmail.com",
+        fullName: "Abdou"
+    }
+];
+
   useEffect(() => {
     window.scrollTo(0, 0);
     localStorage.setItem('Login', 'false');
     localStorage.removeItem('userConnected');
+    const storedAdmins = JSON.parse(localStorage.getItem('AdminsUser'));
+    if (!storedAdmins) {
+        localStorage.setItem('AdminsUser', JSON.stringify(initialAdmin));
+    }
+    const users = JSON.parse(localStorage.getItem("users"));
+    if (!users) {
+      localStorage.setItem("users", JSON.stringify(initialUser));
+    }
 
   }, []);
 

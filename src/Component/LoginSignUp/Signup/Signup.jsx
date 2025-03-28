@@ -14,6 +14,10 @@ function Signup() {
     password: ''
   });
 
+
+
+ 
+
   const [emailValid, setEmailValid] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -32,6 +36,7 @@ function Signup() {
       setEmailValid(validateEmail(value)); 
     }
   };
+
 
   const isFormValid =
     formData.fullName.trim() !== '' &&
