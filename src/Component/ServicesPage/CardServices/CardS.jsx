@@ -16,6 +16,7 @@ function SwipeToSlide({ doctors }) {
             console.log(`Slider Changed to: ${index + 1}`);
         }
     };
+    console.log("Doctors data:", doctors);
 
     return (
         <div className="slider-containerS">
@@ -25,13 +26,14 @@ function SwipeToSlide({ doctors }) {
                         <CardDoctor
                             image={doctor.image}
                             name={doctor.name}
-                            Exp1={doctor.Exp1}
-                            Exp2={doctor.Exp2}
-                            Exp3={doctor.Exp3}
-                            Exp4={doctor.Exp4}
+                            experiences={doctor.experiences}
+                            
                         />
+                        
                     </div>
                 ))}
+                
+
             </Slider>
         </div>
     );

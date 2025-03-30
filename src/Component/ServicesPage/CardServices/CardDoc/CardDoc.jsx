@@ -1,9 +1,9 @@
 import './CardDoc.css';
 import CardExp from '../../../HomePage/OurDoctors/CardExp/CardExp';
 
-export default function CardDoctor({ image, name, Exp1, Exp2, Exp3, Exp4}) {
+export default function CardDoctor({ image, name, experiences = []}) {
     
-    const expList = [Exp1, Exp2, Exp3, Exp4];
+    console.log("Doctor experiences:", experiences);
 
     return (
         <div className='card-Doc'>
@@ -12,7 +12,7 @@ export default function CardDoctor({ image, name, Exp1, Exp2, Exp3, Exp4}) {
             </div>
             <div className="card-textD">
                 <h1>{name}</h1>
-                <CardExp expList={expList} />
+                <CardExp expList={experiences} />
             </div>
         </div>
     );

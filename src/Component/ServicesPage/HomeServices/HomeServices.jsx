@@ -17,8 +17,6 @@ export default function HomeServices() {
     const [searchTerm, setSearchTerm] = useState('');
     const [services, setServices] = useState([]);
 
-
-
     useEffect(() => {
         const storedServices = localStorage.getItem('servicesData');
         if (storedServices) {
@@ -27,62 +25,62 @@ export default function HomeServices() {
             const initialServices = [
                 {
                     name: "Dentist Service",
-                    description: "Take care of your smile with our dental experts. Treatments for cavities, orthodontics, and whitening. Specialists in implants and dental surgeries. Personalized care for optimal oral health.",
-                    Readmore: "ReadMore",
+                    description: "Take care of your smile with our dental experts.",
+                    Readmore: "Read More",
                     Reserve: "Reserve Now",
                     CardDoctor: [
-                        { image: DocDentist, name: "Jhon Doe", Exp1: "12 years exp", Exp2: "Dental surgery", Exp3: "Aesthetic orthodontics", Exp4: "Dental care" },
-                        { image: DocService2, name: "Jane Doe", Exp1: "10 years exp", Exp2: "Tooth extraction", Exp3: "Braces", Exp4: "Whitening" },
-                        { image: DocService3, name: "Dr. Smith", Exp1: "30 years exp", Exp2: "Chronic diseases", Exp3: "Medical emergencies" },
-                        { image: DocService1, name: "Dr. Brown", Exp1: "28 years exp", Exp2: "Health Check-ups", Exp3: "Vaccination" }
+                        { image: DocDentist, name: "Jhon Doe", experiences: ["12 years exp", "Dental surgery", "Aesthetic orthodontics", "Dental care"] },
+                        { image: DocService2, name: "Jane Doe", experiences: ["10 years exp", "Tooth extraction", "Braces", "Whitening"] },
+                        { image: DocService3, name: "Dr. Smith", experiences: ["30 years exp", "Chronic diseases", "Medical emergencies"] },
+                        { image: DocService1, name: "Dr. Brown", experiences: ["28 years exp", "Health Check-ups", "Vaccination"] }
                     ]
                 },
                 {
                     name: "Generalist Service",
-                    description: "General consultations for all your health needs. Management of chronic diseases and preventive care. Accurate diagnosis and tailored treatments. Your well-being is our top priority.",
-                    Readmore: "ReadMore",
+                    description: "General consultations for all your health needs.",
+                    Readmore: "Read More",
                     Reserve: "Reserve Now",
                     CardDoctor: [
-                        { image: DocGeniralist, name: "Dr. Smith", Exp1: "30 years exp", Exp2: "Chronic diseases", Exp3: "Medical emergencies" },
-                        { image: DocService3, name: "Dr. Brown", Exp1: "28 years exp", Exp2: "Health Check-ups", Exp3: "Vaccination" },
-                        { image: DocService2, name: "Dr. Adams", Exp1: "35 years exp", Exp2: "Advanced surgery", Exp3: "Orthopedic procedures" },
-                        { image: DocService1, name: "Dr. Johnson", Exp1: "33 years exp", Exp2: "General surgery", Exp3: "Trauma care" }
+                        { image: DocGeniralist, name: "Dr. Smith", experiences: ["30 years exp", "Chronic diseases", "Medical emergencies"] },
+                        { image: DocService3, name: "Dr. Brown", experiences: ["28 years exp", "Health Check-ups", "Vaccination"] },
+                        { image: DocService2, name: "Dr. Adams", experiences: ["35 years exp", "Advanced surgery", "Orthopedic procedures"] },
+                        { image: DocService1, name: "Dr. Johnson", experiences: ["33 years exp", "General surgery", "Trauma care"] }
                     ]
                 },
                 {
                     name: "Surgery Service",
-                    description: "Expert surgeons for high-precision procedures. Advanced operations and post-surgery follow-ups. Comprehensive and secure medical care. Guaranteed excellence in surgical treatment.",
-                    Readmore: "ReadMore",
+                    description: "Expert surgeons for high-precision procedures.",
+                    Readmore: "Read More",
                     Reserve: "Reserve Now",
                     CardDoctor: [
-                        { image: DocSurgery, name: "Dr. Adams", Exp1: "35 years exp", Exp2: "Advanced surgery", Exp3: "Orthopedic procedures" },
-                        { image: DocService2, name: "Dr. Johnson", Exp1: "33 years exp", Exp2: "General surgery", Exp3: "Trauma care" },
-                        { image: DocService3, name: "Dr. Smith", Exp1: "30 years exp", Exp2: "Chronic diseases", Exp3: "Medical emergencies" },
-                        { image: DocService1, name: "Dr. Brown", Exp1: "28 years exp", Exp2: "Health Check-ups", Exp3: "Vaccination" }
+                        { image: DocSurgery, name: "Dr. Adams", experiences: ["35 years exp", "Advanced surgery", "Orthopedic procedures"] },
+                        { image: DocService2, name: "Dr. Johnson", experiences: ["33 years exp", "General surgery", "Trauma care"] },
+                        { image: DocService3, name: "Dr. Smith", experiences: ["30 years exp", "Chronic diseases", "Medical emergencies"] },
+                        { image: DocService1, name: "Dr. Brown", experiences: ["28 years exp", "Health Check-ups", "Vaccination"] }
                     ]
                 },
                 {
                     name: "Hematology Service",
-                    description: "Experts in blood diseases and hematological disorders. Personalized diagnosis and treatments. Blood transfusions and condition monitoring. Advanced care for a better quality of life.",
-                    Readmore: "ReadMore",
+                    description: "Experts in blood diseases and hematological disorders.",
+                    Readmore: "Read More",
                     Reserve: "Reserve Now",
                     CardDoctor: [
-                        { image: DocHematologue, name: "Dr. Smith", Exp1: "30 years exp", Exp2: "Chronic diseases", Exp3: "Medical emergencies" },
-                        { image: DocService1, name: "Dr. Brown", Exp1: "28 years exp", Exp2: "Health Check-ups", Exp3: "Vaccination" },
-                        { image: DocService2, name: "Dr. Adams", Exp1: "35 years exp", Exp2: "Advanced surgery", Exp3: "Orthopedic procedures" },
-                        { image: DocService3, name: "Dr. Johnson", Exp1: "33 years exp", Exp2: "General surgery", Exp3: "Trauma care" }
+                        { image: DocHematologue, name: "Dr. Smith", experiences: ["30 years exp", "Chronic diseases", "Medical emergencies"] },
+                        { image: DocService1, name: "Dr. Brown", experiences: ["28 years exp", "Health Check-ups", "Vaccination"] },
+                        { image: DocService2, name: "Dr. Adams", experiences: ["35 years exp", "Advanced surgery", "Orthopedic procedures"] },
+                        { image: DocService3, name: "Dr. Johnson", experiences: ["33 years exp", "General surgery", "Trauma care"] }
                     ]
                 },
                 {
                     name: "Radiology Service",
-                    description: "Medical imaging for accurate diagnosis. MRI, CT scans, and advanced X-rays. Early detection and personalized monitoring. Cutting-edge technology for optimal healthcare.",
-                    Readmore: "ReadMore",
+                    description: "Medical imaging for accurate diagnosis.",
+                    Readmore: "Read More",
                     Reserve: "Reserve Now",
                     CardDoctor: [
-                        { image: DocRadiologue, name: "Dr. Smith", Exp1: "30 years exp", Exp2: "Chronic diseases", Exp3: "Medical emergencies" },
-                        { image: DocRadio, name: "Dr. Brown", Exp1: "28 years exp", Exp2: "Health Check-ups", Exp3: "Vaccination" },
-                        { image: DocService3, name: "Dr. Adams", Exp1: "35 years exp", Exp2: "Advanced surgery", Exp3: "Orthopedic procedures" },
-                        { image: DocService1, name: "Dr. Johnson", Exp1: "33 years exp", Exp2: "General surgery", Exp3: "Trauma care" }
+                        { image: DocRadiologue, name: "Dr. Smith", experiences: ["30 years exp", "Chronic diseases", "Medical emergencies"] },
+                        { image: DocRadio, name: "Dr. Brown", experiences: ["28 years exp", "Health Check-ups", "Vaccination"] },
+                        { image: DocService3, name: "Dr. Adams", experiences: ["35 years exp", "Advanced surgery", "Orthopedic procedures"] },
+                        { image: DocService1, name: "Dr. Johnson", experiences: ["33 years exp", "General surgery", "Trauma care"] }
                     ]
                 }
             ];
@@ -123,11 +121,9 @@ export default function HomeServices() {
                             <button id="ReadMoreS" onClick={() => navigate(`/readmore/${service.name}`)}>
                                 {service.Readmore}
                             </button>
-
                             <button id="ReserveS" onClick={() => navigate(`/reserve?service=${service.name}`)}>
                                 {service.Reserve}
                             </button>
-                            
                         </div>
                     </div>
                     <div className="ServicesCard">
