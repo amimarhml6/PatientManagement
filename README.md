@@ -1,5 +1,5 @@
 
-🏥 MedLink – Patient Management Dashboard (Frontend)
+🏥 MedLink – Patient Management Dashboard 
 
 A modern and responsive **Patient Management Dashboard** built using **React**, **Vite**, **HTML**, **CSS**, and **JavaScript**. This project offers a beautiful UI for managing patient data in healthcare settings.
 
