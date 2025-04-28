@@ -3,6 +3,8 @@
 
 A modern and responsive **Patient Management Dashboard** built using **React**, **Vite**, **HTML**, **CSS**, and **JavaScript**. This project offers a beautiful UI for managing patient data in healthcare settings.
 
+For using Admin Panel: { email: amarhml@gmail.com  Password: 123456}
+
 🔗 **Live Demo**: [View Here](https://patient-management-smoky.vercel.app/)
 
 ---
