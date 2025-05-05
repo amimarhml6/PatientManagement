@@ -15,7 +15,7 @@ For using Admin Panel: { email: amarhml@gmail.com  Password: 123456}
 - 📅 Appointments & schedules UI
 - 📊 Visual dashboard layout for metrics
 - 🔍 Intuitive search and navigation
-- 📱 Fully responsive for mobile, tablet & desktop
+
 
 ---
 
