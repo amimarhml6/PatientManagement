@@ -145,7 +145,17 @@ export default function CustomPaginationActionsTable() {
   };
 
   return (
-    <TableContainer component={Paper} sx={{ borderRadius: 2, boxShadow: 3, p: 2, backgroundColor: "white", width: "1150px", marginLeft: "38px", marginTop: "25px", marginBottom: "30px" }}>
+    <TableContainer component={Paper} sx={{
+      borderRadius: 2,
+      boxShadow: 3,
+      p: 2,
+      backgroundColor: "white",
+      width: "95%",
+      margin: "25px auto 30px",
+      overflowX: "auto"
+      }}
+    >
+
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow sx={{ backgroundColor: '#f5f5f5' }}>

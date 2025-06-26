@@ -65,3 +65,45 @@
   background-color: #007bff;
   opacity: 1;
 }
+
+@media (max-width: 1024px) {
+  .swiper {
+    height: 350px;
+  }
+
+  .slide-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .swiper {
+    height: 280px;
+  }
+
+  .slide-content {
+    padding: 10px;
+  }
+
+  .slide-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}

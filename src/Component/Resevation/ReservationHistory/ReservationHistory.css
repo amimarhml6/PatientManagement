@@ -1,0 +1,40 @@
+/* Pour écrans plus petits que 1024px */
+@media (max-width: 1024px) {
+  .Reservation-History {
+    padding: 0 10px;
+  }
+
+  .table {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .table table {
+    min-width: 800px; /* pour forcer le scroll horizontal */
+  }
+
+  .t ul {
+    padding: 10px;
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .t li {
+    margin-bottom: 8px;
+  }
+}
+
+/* Pour écrans très petits (mobiles) */
+@media (max-width: 600px) {
+  .Reservation-History h1 {
+    font-size: 24px;
+  }
+
+  .t ul {
+    font-size: 0.85rem;
+  }
+
+  .table table {
+    min-width: 700px;
+  }
+}

@@ -12,6 +12,32 @@ function SwipeToSlide({ doctors }) {
         centerPadding: "60px",
         slidesToShow: doctors.length > 4 ? 4 : doctors.length,
         swipeToSlide: true,
+        responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+    ],
         afterChange: function (index) {
             console.log(`Slider Changed to: ${index + 1}`);
         }

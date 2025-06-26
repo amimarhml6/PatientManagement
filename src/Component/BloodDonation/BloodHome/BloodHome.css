@@ -53,3 +53,30 @@
     background-color: #007bff;
     opacity: 1;
   }
+
+ 
+@media (max-width: 1024px) {
+  .swiper {
+    height: 360px;
+  }
+
+  .slide-content {
+    padding: 15px;
+  }
+}
+
+ 
+@media (max-width: 600px) {
+  .swiper {
+    height: 220px;
+  }
+
+  .slide-content {
+    padding: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}

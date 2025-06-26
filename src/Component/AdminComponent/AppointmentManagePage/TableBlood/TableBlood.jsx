@@ -57,7 +57,15 @@ export default function TableBlood({ searchQuery, statusFilter }) {
   );
 
   return (
-    <TableContainer component={Paper} sx={{ borderRadius: 2, boxShadow: 3, p: 2, width: "1150px", margin: "25px auto" }}>
+    <TableContainer component={Paper} sx={{ 
+      borderRadius: 2, 
+      boxShadow: 3, 
+      p: 2, 
+      width: { xs: '95%', sm: '90%', md: '1150px' }, 
+      margin: 'auto', 
+      marginTop: '20px' 
+    }}>
+
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow sx={{ backgroundColor: '#f5f5f5' }}>

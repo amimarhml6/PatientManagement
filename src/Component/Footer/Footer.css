@@ -5,6 +5,7 @@
   color: white;
   padding: 2rem;
   text-align: center;
+  height: 350px;
 }
 
 .footer-content {
@@ -100,5 +101,8 @@
   .footer-section {
     max-width: 100%;
     margin-bottom: 1rem;
+  }
+  .footer{
+    height: 840px;
   }
 }

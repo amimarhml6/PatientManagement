@@ -1,4 +1,5 @@
  import Table from './TableComponent/TableComponent'
+ import './ReservationHistory.css'
 export default function ReservationHistory(){
     return(
         <div className="Reservation-History">

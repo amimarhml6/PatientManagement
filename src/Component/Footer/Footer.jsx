@@ -28,21 +28,20 @@ export default function Footer() {
           <h3 style={{color:"#1B5C9E"}} >Contact & <span style={{color:"#1BB13C"}}>Emergencies</span></h3>
           <p>📞 Call Us: <a href="tel:+213123456789">+213 123 456 789</a></p>
           <p>📧 Email: <a href="mailto:contact@clinic.com">contact@medlink.com</a></p>
-          {/* link to page contact us */}
-          <p>📲 website: <a href="#">Send a Message</a></p> 
+          <p>📲 website: <a href="/contact">Send a Message</a></p> 
         </div>
 
         <div className="footer-section links">
           <h3 style={{color:"#1B5C9E"}}>Quick <span style={{color:"#1BB13C"}}>Links</span></h3>
           <ul>
-            <li><a href="#">Book an Appointment</a></li>
-            <li><a href="#">Meet Our Doctors & Services</a></li>
-            <li><a href="#">Blood Donation</a></li>
+            <li><a href="/services">Book an Appointment</a></li>
+            <li><a href="/services">Meet Our Doctors & Services</a></li>
+            <li><a href="/BloodDonation">Blood Donation</a></li>
           </ul>
         </div>
       </div>
 
-      {/* Séparation avant les icônes sociales */}
+      
       <hr className="footer-separator" />
 
       <div className="footer-bottom">
@@ -53,6 +52,7 @@ export default function Footer() {
           <a href="#"><i className="bx bxl-whatsapp"></i></a>
         </div>
         <p>© 2025 MEDLINK | All Rights Reserved</p>
+        <p>Designed by <a href="https://www.instagram.com/amar_engineer1/" target="_blank" rel="noopener noreferrer">Amar_engineer1</a></p>
       </div>
     </footer>
   );

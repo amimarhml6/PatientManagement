@@ -76,3 +76,53 @@
     text-align: center;
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+  .why-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .why-box {
+    width: 100%;
+  }
+
+  .why-icon {
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+  }
+
+  .why-title {
+    font-size: 22px;
+  }
+
+  .why-description {
+    font-size: 13px;
+  }
+
+  .why-box-title {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us {
+    padding: 10px 20px 30px 20px;
+  }
+
+  .why-icon {
+    width: 100%;
+    max-width: 260px;
+    height: 55px;
+  }
+
+  .why-title {
+    font-size: 25px;
+  }
+
+  .why-box-title {
+    font-size: 14px;
+  }
+}

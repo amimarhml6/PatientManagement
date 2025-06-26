@@ -126,3 +126,46 @@
   .cta-button:hover {
     background: #1BB13C;
   }
+
+  @media (max-width: 1024px) {
+  .cta-section {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  .cta-section h3 {
+    font-size: 1.3em;
+  }
+
+  .cta-section p {
+    font-size: 0.95em;
+  }
+
+  .cta-button {
+    font-size: 0.95em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cta-section {
+    width: 100%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .cta-section h3 {
+    font-size: 1.1em;
+  }
+
+  .cta-section p {
+    font-size: 0.9em;
+  }
+
+  .cta-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+  }
+}

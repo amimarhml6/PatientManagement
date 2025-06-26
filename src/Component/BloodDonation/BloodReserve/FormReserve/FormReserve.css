@@ -58,3 +58,31 @@ input, select {
 .blood-btn:hover {
     background-color: #1BB13C;
 }
+
+@media (max-width: 1106px) {
+  .blood-grid-form {
+    grid-template-columns: 1fr;
+  }
+
+  .blood-full-width {
+    grid-column: span 1;
+  }
+
+  .blood-btn {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .blood-form-title {
+    font-size: 24px;
+  }
+
+  input, select {
+    font-size: 14px;
+  }
+
+  .blood-btn {
+    font-size: 16px;
+  }
+}

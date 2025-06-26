@@ -8,6 +8,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isLogged = JSON.parse(localStorage.getItem("Login"));
   const userEmail = localStorage.getItem("userConnected");
   const admins = JSON.parse(localStorage.getItem("AdminsUser")) || [];
@@ -17,11 +18,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -33,9 +31,13 @@ export default function Navbar() {
             <span className="brand-name" style={{ color: "#1BB13C" }}>Link</span>
           </span>
         </Link>
+
+        <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <i className={`bx ${isMenuOpen ? 'bx-x' : 'bx-menu'}`}></i>
+        </button>
       </div>
 
-      <div className="navbar-links">
+      <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <Link to="/Home" className="nav-link">Home</Link>
         <Link to="/services" className="nav-link">Services</Link>
         <Link to="/BloodDonation" className="nav-link">BloodDonation</Link>
@@ -43,8 +45,8 @@ export default function Navbar() {
         <Link to="/contact" className="nav-link">Contact Us</Link>
 
         {isAdmin && (
-          <div 
-            className="dropdown" 
+          <div
+            className="dropdown"
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
@@ -58,16 +60,17 @@ export default function Navbar() {
             )}
           </div>
         )}
-      </div>
 
-      <div className='log' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '25px', marginRight: "100px" }}>
-        {isLogged ? (
-          <button className="button-85" role="button" onClick={() => navigate('/login')}>Log Out</button>
-        ) : (
-          <button className="nav-link" id='login' onClick={() => navigate('/login')}>
-            <i className='bx bxs-user-circle'></i>
-          </button>
-        )}
+        
+        <div className='log'>
+          {isLogged ? (
+            <button className="button-85" role="button" onClick={() => navigate('/login')}>Log Out</button>
+          ) : (
+            <button className="nav-link" id='login' onClick={() => navigate('/login')}>
+              <i className='bx bxs-user-circle' id="looo"></i>
+            </button>
+          )}
+        </div>
       </div>
     </nav>
   );

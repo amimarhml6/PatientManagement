@@ -46,7 +46,14 @@ export default function TableApp({ searchQuery, statusFilter }) {
   });
 
   return (
-    <TableContainer component={Paper} sx={{ borderRadius: 2, boxShadow: 3, p: 2, width: '90%', margin: 'auto', marginTop: '20px' }}>
+    <TableContainer component={Paper} sx={{ 
+      borderRadius: 2, 
+      boxShadow: 3, 
+      p: 2, 
+      width: { xs: '95%', sm: '90%', md: '1150px' }, 
+      margin: 'auto', 
+      marginTop: '20px' 
+    }}>
       <Table>
         <TableHead>
           <TableRow sx={{ backgroundColor: '#f5f5f5' }}>

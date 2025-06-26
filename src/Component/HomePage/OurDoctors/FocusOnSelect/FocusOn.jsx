@@ -17,6 +17,32 @@ function SwipeToSlide() {
     centerPadding: "60px",
     slidesToShow: 5,
     swipeToSlide: true,
+        responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1.5,
+        },
+      },
+    ],
     afterChange: function(index) {
       console.log(
         `Slider Changed to: ${index + 1}, background: #222; color: #bada55`

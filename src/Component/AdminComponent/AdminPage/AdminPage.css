@@ -39,3 +39,49 @@
 .AdminTabels {
     margin-top: 20px;
 }
+
+/* Responsive design pour tablettes et mobiles */
+@media (max-width: 768px) {
+  .AdminForm {
+    flex-direction: column;
+    align-items: stretch;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 15px;
+  }
+
+  .in-admin {
+    width: 100%;
+  }
+
+  .btn-admin {
+    width: 100%;
+  }
+
+  .Admin-Page h1,
+  .Admin-Page p {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .AdminForm {
+    gap: 12px;
+  }
+
+  .in-admin,
+  .btn-admin {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .Admin-Page h1 {
+    font-size: 26px;
+  }
+
+  .Admin-Page p {
+    font-size: 18px;
+  }
+}
