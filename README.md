@@ -35,7 +35,3 @@ Password: 123456
 - 🖼 **Swiper.js** – Sliders / Carousels
 - 🌍 **Leaflet.js** – (Optional: maps)
 
----
-
-## 📂 Project Structure
-
