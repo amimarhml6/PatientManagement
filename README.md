@@ -1,20 +1,41 @@
-🏥 MedLink – Patient Management Dashboard (Frontend)
+# 🏥 MedLink – Patient Management Dashboard
 
-A modern and responsive Patient Management Dashboard built using React, Vite, HTML, CSS, and JavaScript. This project offers a beautiful UI for managing patient data in healthcare settings.
+**MedLink** is a modern and responsive **Patient Management Dashboard** built with **React**, **Vite**, and **Material UI**.  
+It provides an elegant and functional interface for managing patients, appointments, blood donations, and admin roles in healthcare environments.
 
-For using Admin Panel: { email: amarhml@gmail.com Password: 123456}
+🔗 **Live Demo**: [View the application](https://patient-management-smoky.vercel.app/)
 
-🔗 Live Demo: View Here
+🔐 **Admin Panel Access:**  
+Email: amarhml@gmail.com
+Password: 123456
 
-✨ Features
-📄 Patient profile overview
-📅 Appointments & schedules UI
-📊 Visual dashboard layout for metrics
-🔍 Intuitive search and navigation
-📱 Fully responsive for mobile, tablet & desktop
-🛠️ Tech Stack
-React + Vite
-HTML5, CSS3
-JavaScript (ES6+)
-MUI (Material UI) for components
-Boxicons, Lucide-react, Framer Motion, Leaflet, Swiper, and others
+---
+
+## ✨ Features
+
+- 🧑‍⚕️ **Patient Profile Management**
+- 📅 **Appointment Scheduling**
+- 📊 **Dashboard with Charts & Metrics**
+- 🩸 **Blood Donation Tracking**
+- 👨‍💼 **Admin Role Management**
+- 🔍 **Live Search (by name / email)**
+- ✅ **Status filtering (Pending, Confirmed, Completed)**
+- 📱 **Fully Responsive Design**
+
+---
+
+## 🛠 Tech Stack
+
+- ⚛️ **React + Vite**
+- 🎨 **HTML5 + CSS3**
+- 🧠 **JavaScript (ES6+)**
+- 🧩 **Material UI (MUI)** – UI components
+- 🔔 **Boxicons**, **Lucide-react** – Icon libraries
+- 💫 **Framer Motion** – Animations
+- 🖼 **Swiper.js** – Sliders / Carousels
+- 🌍 **Leaflet.js** – (Optional: maps)
+
+---
+
+## 📂 Project Structure
+
