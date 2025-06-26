@@ -35,3 +35,9 @@ Password: 123456
 - 🖼 **Swiper.js** – Sliders / Carousels
 - 🌍 **Leaflet.js** – (Optional: maps)
 
+---
+
+📌 Notes
+✅ This project uses localStorage for data persistence (for simplicity).
+✅ You can extend it with a real backend (Node.js, Firebase, etc) for production use.
+✅ Responsive design for mobile, tablet, and desktop.
