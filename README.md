@@ -38,6 +38,6 @@ Password: 123456
 ---
 
 📌 Notes
-✅ This project uses localStorage for data persistence (for simplicity).
-✅ You can extend it with a real backend (Node.js, Firebase, etc) for production use.
-✅ Responsive design for mobile, tablet, and desktop.
+-✅ This project uses localStorage for data persistence (for simplicity).
+-✅ You can extend it with a real backend (Node.js, Firebase, etc) for production use.
+-✅ Responsive design for mobile, tablet, and desktop.
